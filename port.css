@@ -1,0 +1,545 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 9px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+     justify-content: center; 
+}
+
+#hero {
+    background-image: url(./images/port.jpg.jpg);
+    background-size: cover;
+    /* background-position:  top center; */
+    position: relative;
+    background-position: 100%;
+    /* z-index: 1; */
+}
+
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .9;
+    z-index: -1;
+
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: rgb(169, 169, 58);
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: darkgoldenrod;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 1s;
+}
+
+#hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: brown;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 36px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#hero .cta:hover {
+    border-radius: 20%;
+    color: azure;
+    background-color: rgb(130, 163, 97);
+}
+
+/* footer section */
+.brand h1{
+    font-size: 3rem;
+   text-transform: uppercase;
+   color: rgb(118, 51, 51);
+}
+.footer h1 span{
+    color: red;
+}
+#footer h2{
+    color: rgb(131, 194, 54);
+    margin-top: 11px;
+    margin-bottom: 11px;
+    letter-spacing: .5rem;
+    font-weight: 600;
+}
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 33px;
+     margin-top: 11px;
+     
+}
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 6px;
+}
+#footer p{
+    color: darkorange;
+    font-size: 1.7rem;
+    margin-top: 8px;
+}
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}
+
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#services .section-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: black;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: .8rem;
+    text-align: center;
+
+}
+
+#services.section-title span {
+    color: brown;
+}
+
+#services .service-top p {
+    font-size: 2rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .03rem;
+    color: rgb(86, 10, 10);
+}
+
+#services .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.anish {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 20px;
+    background-image: url(./images/ravi.jpg.jpg);
+    background-size: cover;
+    margin: 10px 5%;
+
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 700;
+    color: black;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+
+}
+
+.section-title span {
+    color: brown;
+}
+
+/* img{
+     height:50%;
+    width: 200px; 
+    object-fit: cover;
+    border-radius: 30%; 
+} */
+#projects .projects {
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+#projects .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#projects .project-item {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: 70%;
+    border: 10px;
+    margin: 22px auto;
+    border-radius: 20%;
+}
+
+#projects .project-info {
+    padding: 30px;
+    flex-basis: 59%;
+    height: 90%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(147, 145, 125, 0.8);
+    border-radius: 30px;
+}
+
+#projects .project-info h1 {
+    font-size: 4rem;
+
+}
+
+#projects .project-info h2 {
+    font-size: 2rem;
+    margin-top: 9px;
+}
+
+#projects .project-info p {
+    color: rgb(42, 5, 5);
+
+}
+
+.project-img {
+    flex-basis: 400px;
+    /* height: 50%; */
+    overflow: hidden;
+    /* object-fit: cover; */
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+
+
+}
+
+/* about me section */
+#about .about {
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 22px;
+
+}
+
+#about .col-left {
+    width: 300px;
+    height: 300px;
+
+}
+
+#about .col-right {
+    width: 100%;
+}
+
+#about .col-right h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    margin-top: 11px;
+    margin-bottom: 9px;
+}
+
+#about .col-right p {
+    font-size: 4rem;
+    color: crimson;
+
+}
+
+.cta {
+    display: inline-block;
+    padding: 15px 22px;
+    color: brown;
+    background-color: transparent;
+    border: 9px solid rgb(175, 67, 118);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 36px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+
+}
+
+.cta:hover {
+    border-radius: 30%;
+    color: rgb(3, 24, 24);
+    background-color: rgb(168, 209, 72);
+
+}
+
+#about .col-left .about-img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 10px salmon;
+}
+
+/* contact */
+#contact .contact {
+    /* margin-top: 444px; */
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+#contact .contact-items {
+    width: 450px;
+    /* margin-top: 50px; */
+}
+
+#contact .contact-item {
+
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12%;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 18px 2px rgb(102, 51, 51);
+
+
+}
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 9px 9px rgb(185, 74, 74);
+}
+
+#contact .icon {
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 11px;
+}
+
+#contact .contact-info h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+
+}
+
+#contact .contact-info h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 450;
+
+}
+/* footer style */
+
+#footer {
+  background-color: rgba(36, 40, 14, 0.847);
+   
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding-top:  50px;
+    padding-bottom: 10px;
+}
+
+/* media quary */
+@media only screen and (min-width: 777px){
+    .cta{
+        font-size: 2.4rem;
+        padding: 22px 66px;
+    }
+    h1 .section-title{
+        font-size: 6rem;
+    }
+
+    #projects .project{
+        /* height: 400px; */
+        margin: 0%;
+        width: 100%;
+    }
+}
+
+ #header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+ }
+ #header .header{
+    min-height: 8vh;
+    background-color: rgb(232, 232, 125);
+ }
+ #header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 11px;
+
+ } 
+ .nav-list{
+    display: flex;
+ }
+ .nav-links{
+    display: flex;
+    gap: 1rem;
+    font-size: 15px;
+ }
+  /* #header .nav-list ul{
+    list-style: none;
+    position: absolute;
+    background-color: rgb(175, 175, 200); */
+    /* width: 100vw;
+    height: 100vh; */
+    /* left: 0%s; */
+    /* top: 0; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* justify-items: center; */
+    /* z-index: 1; */ 
+    /* overflow: hidden; */
+ /* }  */
+/* 
+ 
+ #header .nav-list ul a{
+    font-size: 2.4rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: beige;
+    text-transform: uppercase;
+    padding: 22px;
+    display: block;
+ } */
+ /* #header .nav-list ul a::after{ */
+    /* content: attr(data-after); */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%) scale(0); */
+    /* color: rgb(131, 141, 92); */
+    /* font-size: 12rem; */
+    /* letter-spacing: 55px; */
+    /* z-index: -1; */
+    /* transition: .3s ease letter-spacing; */
+ /* } */
+ /* #header .nav-list ul li:hover a:after{
+    transform: translate(-50%,-50%) scale(1);
+    letter-spacing: initial;
+ } */
+   /* #header .hamburger{ */
+    /* height: 66px; */
+    /* width: 66px; */
+    /* display: inline-block; */
+    /* border: 4px solid red; */
+    /* border-radius: 50%; */
+            /* position: rel/tive; } */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* z-index: 100; */
+    /* cursor: pointer; */
+    /* transform: scale(.8); */
+ /* }   */
+ /* #header .hamburger .bar{ */
+    /* height: 2px; */
+    /* width: 30px; */
+    /* position: relative; */
+    /* background-color: blue; */
+    
+
+ /* } */
+ /* #header .hamburger .bar::after, */
+ /* #header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top, bottom;} */ 
+/* }
+#header .hamburger .bar::after{
+    top: 9px;
+}
+#header .hamburger .bar::before{
+    bottom: 9px;
+}
+#header .hamburger .active .bar::before{
+    bottom: 0;
+}
+#header .hamburger .active .bar::after{
+  top: 0; */
+  
+/* }  */
+/* #header .nav-list ul li{
+ display: inline-block;
+} */
+/* end of header section */
